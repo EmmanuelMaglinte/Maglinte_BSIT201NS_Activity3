@@ -56,6 +56,15 @@ namespace Maglinte_BSIT201NS_Activity3
             decimal totalLectureUnits = 0m;
             decimal totalLabUnits = 0m;
 
+            decimal downpayment = totalTuitionAndFees * 0.25m;
+            decimal remainingBalance = totalTuitionAndFees - downpayment;
+            decimal installment = remainingBalance / 3m;
+
+            textBox64.Text = downpayment.ToString("0.00", CultureInfo.InvariantCulture); // Downpayment
+            textBox65.Text = installment.ToString("0.00", CultureInfo.InvariantCulture); // 1st Installment
+            textBox66.Text = installment.ToString("0.00", CultureInfo.InvariantCulture); // 2nd Installment
+            textBox67.Text = installment.ToString("0.00", CultureInfo.InvariantCulture); // 3rd Installment
+
             for (int i = 0; i < 6; i++)
             {
                 decimal lec = ParseDecimalSafe(lecBoxes[i].Text);
@@ -67,6 +76,8 @@ namespace Maglinte_BSIT201NS_Activity3
                 totalCred += cred;
                 totalLectureUnits += lec;
                 totalLabUnits += lab;
+
+                
             }
 
             textBox55.Text = totalCred.ToString("0.##", CultureInfo.InvariantCulture);
