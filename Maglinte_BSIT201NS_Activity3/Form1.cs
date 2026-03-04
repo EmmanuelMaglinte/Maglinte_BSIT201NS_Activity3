@@ -27,7 +27,7 @@ namespace Maglinte_BSIT201NS_Activity3
         private void Form1_Load(object sender, EventArgs e)
         {
             cmbProgram.Items.Clear();
-            cmbProgram.Items.AddRange(new object[] { "BSIT", "BSCS", "BSBA" });
+            cmbProgram.Items.AddRange(new object[] { "BS Information Technology","BS Computer Engineering", "BS Electrical Engineering", "BS Computer Science", "BS Mechanical Engineering", "BS Industrial Engineering" });
 
             cmbYearLevel.Items.Clear();
             cmbYearLevel.Items.AddRange(new object[] { "1", "2", "3", "4" });
